@@ -140,6 +140,10 @@ img {
   border-radius: 2px;
 }
 
+.header-link.current {
+  color: var(--ocean);
+}
+
 .header-link.current::after,
 .header-link:hover::after,
 .header-link:focus::after {
