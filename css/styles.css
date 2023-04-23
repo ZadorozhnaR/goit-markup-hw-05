@@ -144,9 +144,7 @@ img {
   color: var(--ocean);
 }
 
-.header-link.current::after,
-.header-link:hover::after,
-.header-link:focus::after {
+.header-link.current::after {
   background-color: var(--ocean);
 }
 
