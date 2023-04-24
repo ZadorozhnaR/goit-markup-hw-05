@@ -667,16 +667,35 @@ img {
 
 .portfolio-img-box {
   position: relative;
+  overflow: hidden;
 }
 
-.portfolio-img-text {
+.overlay {
   position: absolute;
-  top: 40px;
-  left: 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
 
-  width: 296px;
-  color: var(--cloud);
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 164px;
+
   background-color: var(--iris);
+
+  transition: transform var(--transition-standart);
+}
+
+.portfoli-img-item:hover .overlay {
+  transform: translateY(0%);
+}
+
+.portfolio-img-overlay {
+  color: var(--cloud);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* Modal styles */
@@ -742,8 +761,17 @@ img {
   border: none;
 
   cursor: pointer;
+
+  transition: background-color var(--transition-standart),
+    color var(--transition-standart);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--ocean);
+  color: var(--white);
 }
 
 .modal-icon {
-  fill: var(--navy-blue);
+  fill: currentColor;
 }
